@@ -51,7 +51,7 @@ switcherRef.addEventListener('change', themeChange);
 
 function defaultTheme() {
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === Theme.LIGHT)
+  if (savedTheme === Theme.LIGHT || savedTheme === null)
   {
     document.body.classList.replace(Theme.DARK, Theme.LIGHT);
     localStorage.setItem('theme', Theme.LIGHT);
